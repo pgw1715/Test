@@ -78,4 +78,3 @@ bool findParent(int* parent, int a, int b) {
 		return true;
 	return false;
 }
-//test
