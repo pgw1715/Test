@@ -56,7 +56,7 @@ int main() {
 		}
 	}
 
-	printf("ÃÖ¼Òºñ¿ë : %d\n", sum);
+	printf("ìµœì†Œë¹„ìš© : %d\n", sum);
 }
 
 int getParent(int* parent, int v) {
@@ -65,7 +65,7 @@ int getParent(int* parent, int v) {
 	return parent[v] = getParent(parent, parent[v]);
 }
 
-//UNION - FIND ÇÔ¼ö
+//UNION - FIND í•¨ìˆ˜
 void unionParent(int* parent, int a, int b) {
 	if (getParent(parent, a) > getParent(parent, b))
 		parent[a] = b;
