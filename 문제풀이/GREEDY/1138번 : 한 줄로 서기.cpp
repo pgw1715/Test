@@ -1,3 +1,8 @@
+/*
+입력으로 받는 v 배열이 의미하는 것 : result 배열 앞에 빈칸 n개를 남겨놓아라!
+ex) v[1] = 2 면, result = ㅁㅁ2ㅁㅁㅁ...  
+*/
+
 #include <iostream>
 #include <vector>
 
