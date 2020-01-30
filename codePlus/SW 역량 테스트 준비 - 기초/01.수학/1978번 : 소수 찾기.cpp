@@ -28,11 +28,11 @@ int main(){
 
 void setChae(){
 	chae[0] = chae[1] = true;
-	for(int n = 2;n<=1000000;n++){
+	for(int n = 2;n<=1000;n++){
 		if(chae[n] == true)
 			continue;
 		primeList.push_back(n);
-		for(int i = 2*n;i<=1000000;i+=n){
+		for(int i = n*n;i<=1000;i+=n){   // 1000 * 1000 = 1,000,000 -> int 범위 안이므로 int i = 2*n 대신에 n*n 가능
 			chae[i] = true;
 		}
 	}
