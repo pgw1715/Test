@@ -27,18 +27,13 @@ int main(){
 }
 
 void setChae(){
-	chae[1] = true;
-	int n = 2;
-	while(n*n<=1000){
-		if(chae[n]==true){
-			n++;
+	chae[0] = chae[1] = true;
+	for(int n = 2;n<=1000000;n++){
+		if(chae[n] == true)
 			continue;
+		primeList.push_back(n);
+		for(int i = 2*n;i<=1000000;i+=n){
+			chae[i] = true;
 		}
-		for(int i = n+1;i<=1000;i++){
-			if(i%n==0){
-				chae[i] = true;
-			}
-		}
-		n++;
 	}
 }
