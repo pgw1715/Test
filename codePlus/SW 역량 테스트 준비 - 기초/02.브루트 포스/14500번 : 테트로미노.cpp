@@ -1,6 +1,9 @@
+//1. 실수 무조건함
+//2. maxsize를 502로 안두고 501로 하고 함
+
 #include <stdio.h>
 
-#define MAXSIZE	501
+#define MAXSIZE	502
 
 using namespace std;
 
@@ -26,11 +29,11 @@ int main() {
 				sum = map[i][j] + map[i + 1][j] + map[i + 2][j] + map[i + 3][j];
 				if (sum > maxSum) maxSum = sum;
 			}
-			if (i + 1 <= n && j + 1 <= m) { // 3번 도형
+			if (i + 1 <= n && j + 1 <= m) { //3
 				sum = map[i][j] + map[i + 1][j] + map[i][j + 1] + map[i + 1][j + 1];
-				if(sum > maxSum) maxSum = sum;
+				if (sum > maxSum) maxSum = sum;
 			}
-			if (i + 2 <= n && j + 1 <= m) { //4번
+			if (i + 2 <= n && j + 1 <= m) { //4
 				sum = map[i][j] + map[i + 1][j] + map[i + 2][j] + map[i + 2][j + 1];
 				if (sum > maxSum) maxSum = sum;
 			}
@@ -59,7 +62,7 @@ int main() {
 				if (sum > maxSum) maxSum = sum;
 			}
 			if (i + 1 <= n && j + 2 <= m) { //11
-				sum = map[i + 1][j] + map[i + 1][j + 1] + map[i + 1][j + 2] + map[i][j + 1];
+				sum = map[i + 1][j] + map[i + 1][j + 1] + map[i + 1][j + 2] + map[i][j + 2];
 				if (sum > maxSum) maxSum = sum;
 			}
 			if (i + 2 <= n && j + 1 <= m) { //12
@@ -97,4 +100,5 @@ int main() {
 		}
 	}
 	printf("%d\n", maxSum);
+	return 0;
 }
