@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 using namespace std;
 
@@ -9,8 +8,7 @@ void printPermutation(int*, int);
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
-
-	vector<int> numList;
+	
 	int n, m;
 	cin >> n >> m;
 
